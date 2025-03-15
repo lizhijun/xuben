@@ -1,0 +1,25 @@
+{
+  "name": "xuben-image-website",
+  "version": "1.0.0",
+  "description": "序本影像XUBEN摄影工作室官方网站",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch"
+  },
+  "keywords": [
+    "photography",
+    "portfolio",
+    "studio",
+    "china"
+  ],
+  "author": "序本影像",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "nodemon": "^2.0.22",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
+  }
+} 

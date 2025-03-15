@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>序本影像XUBEN - 摄影工作室</title>
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+    <script src="js/tailwind-config.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Noto Sans SC / Noto Serif SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom styles -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .section-padding {
+                @apply py-12 md:py-16 lg:py-20;
+            }
+            .heading-underline::after {
+                content: '';
+                @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-amber-600;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white bg-opacity-95 shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="logo-container">
+                <a href="index.html" class="block">
+                    <img src="images/logo.png" alt="序本影像XUBEN" class="h-10 md:h-12">
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle md:hidden cursor-pointer text-2xl">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-gray-800 font-medium border-b-2 border-amber-600">首页</a></li>
+                    <li><a href="portfolio.html" class="text-gray-800 font-medium hover:text-amber-600 transition duration-300">作品集</a></li>
+                    <li><a href="contact.html" class="text-gray-800 font-medium hover:text-amber-600 transition duration-300">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="mobile-menu hidden bg-white w-full shadow-md">
+            <ul class="py-4 px-4 space-y-4">
+                <li><a href="index.html" class="block py-2 text-center text-amber-600 font-semibold">首页</a></li>
+                <li><a href="portfolio.html" class="block py-2 text-center text-gray-800 hover:text-amber-600 transition duration-300">作品集</a></li>
+                <li><a href="contact.html" class="block py-2 text-center text-gray-800 hover:text-amber-600 transition duration-300">联系我们</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative bg-gray-900 min-h-[500px] md:min-h-[600px] flex items-center text-white text-center bg-opacity-70 mb-10">
+            <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
+            <div class="absolute inset-0 bg-cover bg-center z-[-1]" style="background-image: url('images/hero-bg.jpg');"></div>
+            <div class="container mx-auto px-4 py-16 z-10">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-wide animate-fadeIn">序本影像</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-0 animate-fadeIn" style="animation-delay: 300ms; animation-fill-mode: forwards;">每一天都是新的序章，希望每一张照片都独一无二！</p>
+                <a href="portfolio.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-8 rounded-md transition duration-300 transform hover:-translate-y-1 opacity-0 animate-fadeIn" style="animation-delay: 600ms; animation-fill-mode: forwards;">查看作品</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section-padding bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 pb-3 relative heading-underline">关于我们</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                        <p class="text-gray-700 mb-4">序本影像是一家位于贵州省贵阳市的专业摄影工作室，我们致力于为每位客户提供独特、个性化的摄影体验。</p>
+                        <p class="text-gray-700 mb-4">我们的摄影师团队拥有丰富的经验和独特的创意视角，专注于捕捉生活中的每一个珍贵瞬间。</p>
+                        <p class="text-gray-700">无论是个人写真、情侣约拍、家庭纪念还是商业摄影，我们都能为您提供专业的服务和难忘的回忆。</p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="rounded-lg overflow-hidden shadow-lg">
+                            <img src="images/studio.jpg" alt="序本影像工作室" class="w-full h-auto transform transition duration-500 hover:scale-105">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section-padding">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 pb-3 relative heading-underline">我们的服务</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="text-5xl text-amber-600 mb-4"><i class="fas fa-camera"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">个人写真</h3>
+                        <p class="text-gray-600">专业的个人肖像摄影，展现您的独特魅力和个性。</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="text-5xl text-amber-600 mb-4"><i class="fas fa-heart"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">情侣写真</h3>
+                        <p class="text-gray-600">记录美好爱情故事，留下甜蜜的时光。</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="text-5xl text-amber-600 mb-4"><i class="fas fa-users"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">家庭合影</h3>
+                        <p class="text-gray-600">捕捉家庭欢乐时刻，创造永恒的家庭回忆。</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="text-5xl text-amber-600 mb-4"><i class="fas fa-building"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">商业摄影</h3>
+                        <p class="text-gray-600">为企业提供专业的产品和形象摄影服务。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Preview Section -->
+        <section class="section-padding bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 pb-3 relative heading-underline">作品展示</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                    <a href="portfolio.html#外景系列" class="group block relative rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="portfolio/外景系列/县城文学/9H0A6702.jpg" alt="外景系列" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-70 text-white text-center transition duration-300 group-hover:bg-amber-600 group-hover:bg-opacity-90">外景系列</div>
+                    </a>
+                    <a href="portfolio.html#光影系列" class="group block relative rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="portfolio/光影系列/暗夜光芒/20250306光影00171.jpg" alt="光影系列" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-70 text-white text-center transition duration-300 group-hover:bg-amber-600 group-hover:bg-opacity-90">光影系列</div>
+                    </a>
+                    <a href="portfolio.html#少女系列" class="group block relative rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="portfolio/少女系列/活力青春/_H0A1177.jpg" alt="少女系列" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-70 text-white text-center transition duration-300 group-hover:bg-amber-600 group-hover:bg-opacity-90">少女系列</div>
+                    </a>
+                    <a href="portfolio.html#花语系列" class="group block relative rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="portfolio/花语系列/冰岛虞美人/20250218春日主题02951.jpg" alt="花语系列" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-70 text-white text-center transition duration-300 group-hover:bg-amber-600 group-hover:bg-opacity-90">花语系列</div>
+                    </a>
+                    <a href="portfolio.html#生日系列" class="group block relative rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="portfolio/生日系列/粉色公主/_H0A2267.jpg" alt="生日系列" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-70 text-white text-center transition duration-300 group-hover:bg-amber-600 group-hover:bg-opacity-90">生日系列</div>
+                    </a>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="portfolio.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-8 rounded-md transition duration-300 transform hover:-translate-y-1">查看更多作品</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section-padding">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 pb-3 relative heading-underline">客户评价</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="testimonial-slider">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white rounded-lg shadow-md p-6 text-center relative">
+                                <div class="text-6xl text-amber-200 absolute top-1 left-2 opacity-25 font-serif">"</div>
+                                <p class="italic text-gray-700 mb-4 relative z-10">"非常感谢序本影像团队，他们为我拍摄的毕业照非常棒！摄影师很专业，整个过程非常愉快。"</p>
+                                <div class="mt-4">
+                                    <h4 class="text-lg font-medium text-amber-600">李小姐</h4>
+                                    <span class="text-sm text-gray-500">个人写真客户</span>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md p-6 text-center relative">
+                                <div class="text-6xl text-amber-200 absolute top-1 left-2 opacity-25 font-serif">"</div>
+                                <p class="italic text-gray-700 mb-4 relative z-10">"我和女友在这里拍的情侣照片非常满意，摄影师很有耐心，能够捕捉到我们最自然的表情和动作。"</p>
+                                <div class="mt-4">
+                                    <h4 class="text-lg font-medium text-amber-600">张先生</h4>
+                                    <span class="text-sm text-gray-500">情侣写真客户</span>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md p-6 text-center relative">
+                                <div class="text-6xl text-amber-200 absolute top-1 left-2 opacity-25 font-serif">"</div>
+                                <p class="italic text-gray-700 mb-4 relative z-10">"为我们公司的产品拍摄了一组高质量的照片，效果超出预期，非常专业！"</p>
+                                <div class="mt-4">
+                                    <h4 class="text-lg font-medium text-amber-600">王总监</h4>
+                                    <span class="text-sm text-gray-500">商业客户</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white pt-12 pb-4">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="images/logo-white.png" alt="序本影像XUBEN" class="h-12 mb-4">
+                    <p class="text-gray-400 mb-4">每一天都是新的序章，希望每一张照片都独一无二！</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-700">联系方式</h3>
+                    <p class="flex items-center text-gray-400 mb-2">
+                        <i class="fas fa-phone text-amber-500 mr-3"></i> 18798007944（微信同号）
+                    </p>
+                    <p class="flex items-center text-gray-400">
+                        <i class="fas fa-map-marker-alt text-amber-500 mr-3"></i> 贵州省贵阳市花溪区板桥艺术村C区95-1号
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-700">关注我们</h3>
+                    <div class="grid grid-cols-3 gap-4 mt-4">
+                        <div class="text-center">
+                            <img src="qrcode.png" alt="微信二维码" class="w-24 h-24 mx-auto mb-2 bg-white p-1 rounded-md">
+                            <p class="text-sm text-gray-400">微信</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="xiaohongshu.png" alt="小红书二维码" class="w-24 h-24 mx-auto mb-2 bg-white p-1 rounded-md">
+                            <p class="text-sm text-gray-400">小红书</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="douyin.png" alt="抖音二维码" class="w-24 h-24 mx-auto mb-2 bg-white p-1 rounded-md">
+                            <p class="text-sm text-gray-400">抖音</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 mt-4 justify-center">
+                        <a href="#" class="bg-gray-800 hover:bg-amber-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-amber-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-amber-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fas fa-comment"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 text-sm pt-4 border-t border-gray-800">
+                <p>&copy; 2023 序本影像XUBEN. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-amber-600 hover:bg-amber-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if(menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Header scroll effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('py-2', 'shadow-md');
+                    header.classList.remove('py-3', 'shadow-sm');
+                } else {
+                    header.classList.add('py-3', 'shadow-sm');
+                    header.classList.remove('py-2', 'shadow-md');
+                }
+            });
+            
+            // Back to top button
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
