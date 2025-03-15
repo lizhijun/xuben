@@ -69,19 +69,71 @@
         <!-- Portfolio Categories Filter -->
         <section class="mb-12">
             <div class="container mx-auto px-4">
-                <div class="flex flex-wrap justify-center gap-3">
-                    <button class="filter-btn active bg-amber-600 text-white px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                <!-- Main categories -->
+                <div class="flex flex-wrap justify-center gap-3 mb-6">
+                    <button class="main-filter-btn active bg-amber-600 text-white px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
                             data-filter="all">全部作品</button>
-                    <button class="filter-btn bg-white text-gray-700 px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                    <button class="main-filter-btn bg-white text-gray-700 px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
                             data-filter="外景系列">外景系列</button>
-                    <button class="filter-btn bg-white text-gray-700 px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                    <button class="main-filter-btn bg-white text-gray-700 px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
                             data-filter="光影系列">光影系列</button>
-                    <button class="filter-btn bg-white text-gray-700 px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                    <button class="main-filter-btn bg-white text-gray-700 px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
                             data-filter="少女系列">少女系列</button>
-                    <button class="filter-btn bg-white text-gray-700 px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                    <button class="main-filter-btn bg-white text-gray-700 px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
                             data-filter="花语系列">花语系列</button>
-                    <button class="filter-btn bg-white text-gray-700 px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                    <button class="main-filter-btn bg-white text-gray-700 px-5 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
                             data-filter="生日系列">生日系列</button>
+                </div>
+                
+                <!-- Subcategories (initially hidden) -->
+                <div id="subCategoriesContainer" class="flex flex-wrap justify-center gap-3 mt-4 opacity-0 h-0 overflow-hidden transition-all duration-300">
+                    <!-- 外景系列 subcategories -->
+                    <div class="subcategory-group" data-parent="外景系列">
+                        <button class="sub-filter-btn active bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="all">所有外景</button>
+                        <button class="sub-filter-btn bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="县城文学">县城文学</button>
+                        <button class="sub-filter-btn bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="居家清冷感">居家清冷感</button>
+                        <button class="sub-filter-btn bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="韩式情绪">韩式情绪</button>
+                        <button class="sub-filter-btn bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="秋日来信">秋日来信</button>
+                    </div>
+                    
+                    <!-- 光影系列 subcategories -->
+                    <div class="subcategory-group" data-parent="光影系列">
+                        <button class="sub-filter-btn active bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="all">所有光影</button>
+                        <button class="sub-filter-btn bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="暗夜光芒">暗夜光芒</button>
+                    </div>
+                    
+                    <!-- 少女系列 subcategories -->
+                    <div class="subcategory-group" data-parent="少女系列">
+                        <button class="sub-filter-btn active bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="all">所有少女</button>
+                        <button class="sub-filter-btn bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="活力青春">活力青春</button>
+                    </div>
+                    
+                    <!-- 花语系列 subcategories -->
+                    <div class="subcategory-group" data-parent="花语系列">
+                        <button class="sub-filter-btn active bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="all">所有花语</button>
+                        <button class="sub-filter-btn bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="冰岛虞美人">冰岛虞美人</button>
+                        <button class="sub-filter-btn bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="早春樱花">早春樱花</button>
+                    </div>
+                    
+                    <!-- 生日系列 subcategories -->
+                    <div class="subcategory-group" data-parent="生日系列">
+                        <button class="sub-filter-btn active bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="all">所有生日</button>
+                        <button class="sub-filter-btn bg-gray-200 text-gray-800 px-4 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300"
+                                data-filter="粉色公主">粉色公主</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -91,7 +143,7 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery">
                     <!-- 外景系列 -->
-                    <div class="gallery-item group" data-category="外景系列">
+                    <div class="gallery-item group" data-category="外景系列" data-subcategory="县城文学">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/外景系列/县城文学/9H0A6702.jpg" alt="县城文学" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -100,7 +152,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="外景系列">
+                    <div class="gallery-item group" data-category="外景系列" data-subcategory="县城文学">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/外景系列/县城文学/9H0A6690.jpg" alt="县城文学" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -109,7 +161,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="外景系列">
+                    <div class="gallery-item group" data-category="外景系列" data-subcategory="县城文学">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/外景系列/县城文学/9H0A6640.jpg" alt="县城文学" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -118,27 +170,27 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="外景系列">
+                    <div class="gallery-item group" data-category="外景系列" data-subcategory="居家清冷感">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
-                            <img src="portfolio/外景系列/居家清冷感/9H0A6690.jpg" alt="居家清冷感" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <img src="portfolio/外景系列/居家清冷感/DSC01106.jpg" alt="居家清冷感" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
                                 <h3 class="text-xl font-semibold mb-2">居家清冷感</h3>
                                 <p>外景系列</p>
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="外景系列">
+                    <div class="gallery-item group" data-category="外景系列" data-subcategory="韩式情绪">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
-                            <img src="portfolio/外景系列/韩式情绪/9H0A6610.jpg" alt="韩式情绪" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <img src="portfolio/外景系列/韩式情绪/DSC01678.jpg" alt="韩式情绪" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
                                 <h3 class="text-xl font-semibold mb-2">韩式情绪</h3>
                                 <p>外景系列</p>
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="外景系列">
+                    <div class="gallery-item group" data-category="外景系列" data-subcategory="秋日来信">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
-                            <img src="portfolio/外景系列/秋日来信/9H0A6586.jpg" alt="秋日来信" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <img src="portfolio/外景系列/秋日来信/DSC02508.jpg" alt="秋日来信" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
                                 <h3 class="text-xl font-semibold mb-2">秋日来信</h3>
                                 <p>外景系列</p>
@@ -147,7 +199,7 @@
                     </div>
 
                     <!-- 光影系列 -->
-                    <div class="gallery-item group" data-category="光影系列">
+                    <div class="gallery-item group" data-category="光影系列" data-subcategory="暗夜光芒">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/光影系列/暗夜光芒/20250306光影00171.jpg" alt="暗夜光芒" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -156,7 +208,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="光影系列">
+                    <div class="gallery-item group" data-category="光影系列" data-subcategory="暗夜光芒">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/光影系列/暗夜光芒/20250306光影00161.jpg" alt="暗夜光芒" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -165,7 +217,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="光影系列">
+                    <div class="gallery-item group" data-category="光影系列" data-subcategory="暗夜光芒">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/光影系列/暗夜光芒/20250306光影00139.jpg" alt="暗夜光芒" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -174,7 +226,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="光影系列">
+                    <div class="gallery-item group" data-category="光影系列" data-subcategory="暗夜光芒">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/光影系列/暗夜光芒/20250306光影00121.jpg" alt="暗夜光芒" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -183,7 +235,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="光影系列">
+                    <div class="gallery-item group" data-category="光影系列" data-subcategory="暗夜光芒">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/光影系列/暗夜光芒/20250306光影00112.jpg" alt="暗夜光芒" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -192,7 +244,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="光影系列">
+                    <div class="gallery-item group" data-category="光影系列" data-subcategory="暗夜光芒">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/光影系列/暗夜光芒/20250306光影00101.jpg" alt="暗夜光芒" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -203,7 +255,7 @@
                     </div>
 
                     <!-- 少女系列 -->
-                    <div class="gallery-item group" data-category="少女系列">
+                    <div class="gallery-item group" data-category="少女系列" data-subcategory="活力青春">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/少女系列/活力青春/_H0A1177.jpg" alt="活力青春" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -212,7 +264,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="少女系列">
+                    <div class="gallery-item group" data-category="少女系列" data-subcategory="活力青春">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/少女系列/活力青春/_H0A1207.jpg" alt="活力青春" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -221,7 +273,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="少女系列">
+                    <div class="gallery-item group" data-category="少女系列" data-subcategory="活力青春">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/少女系列/活力青春/_H0A1149.jpg" alt="活力青春" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -230,7 +282,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="少女系列">
+                    <div class="gallery-item group" data-category="少女系列" data-subcategory="活力青春">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/少女系列/活力青春/_H0A1152.jpg" alt="活力青春" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -239,7 +291,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="少女系列">
+                    <div class="gallery-item group" data-category="少女系列" data-subcategory="活力青春">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/少女系列/活力青春/_H0A1187.jpg" alt="活力青春" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -248,7 +300,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="少女系列">
+                    <div class="gallery-item group" data-category="少女系列" data-subcategory="活力青春">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/少女系列/活力青春/_H0A1194.jpg" alt="活力青春" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -259,7 +311,7 @@
                     </div>
 
                     <!-- 花语系列 -->
-                    <div class="gallery-item group" data-category="花语系列">
+                    <div class="gallery-item group" data-category="花语系列" data-subcategory="冰岛虞美人">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/花语系列/冰岛虞美人/20250218春日主题02951.jpg" alt="冰岛虞美人" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -268,7 +320,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="花语系列">
+                    <div class="gallery-item group" data-category="花语系列" data-subcategory="冰岛虞美人">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/花语系列/冰岛虞美人/20250218春日主题02947.jpg" alt="冰岛虞美人" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -277,7 +329,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="花语系列">
+                    <div class="gallery-item group" data-category="花语系列" data-subcategory="冰岛虞美人">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/花语系列/冰岛虞美人/20250218春日主题02898.jpg" alt="冰岛虞美人" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -286,7 +338,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="花语系列">
+                    <div class="gallery-item group" data-category="花语系列" data-subcategory="早春樱花">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/花语系列/早春樱花/20250225樱花主题03119.jpg" alt="早春樱花" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -295,7 +347,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="花语系列">
+                    <div class="gallery-item group" data-category="花语系列" data-subcategory="早春樱花">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/花语系列/早春樱花/20250225樱花主题03073.jpg" alt="早春樱花" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -304,7 +356,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="花语系列">
+                    <div class="gallery-item group" data-category="花语系列" data-subcategory="早春樱花">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/花语系列/早春樱花/20250225樱花主题03058.jpg" alt="早春樱花" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -315,7 +367,7 @@
                     </div>
 
                     <!-- 生日系列 -->
-                    <div class="gallery-item group" data-category="生日系列">
+                    <div class="gallery-item group" data-category="生日系列" data-subcategory="粉色公主">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/生日系列/粉色公主/_H0A2267.jpg" alt="粉色公主" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -324,7 +376,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="生日系列">
+                    <div class="gallery-item group" data-category="生日系列" data-subcategory="粉色公主">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/生日系列/粉色公主/_H0A2272.jpg" alt="粉色公主" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -333,7 +385,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="生日系列">
+                    <div class="gallery-item group" data-category="生日系列" data-subcategory="粉色公主">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/生日系列/粉色公主/_H0A2235.jpg" alt="粉色公主" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -342,7 +394,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="生日系列">
+                    <div class="gallery-item group" data-category="生日系列" data-subcategory="粉色公主">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/生日系列/粉色公主/_H0A2258.jpg" alt="粉色公主" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -351,7 +403,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="生日系列">
+                    <div class="gallery-item group" data-category="生日系列" data-subcategory="粉色公主">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/生日系列/粉色公主/_H0A2249.jpg" alt="粉色公主" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -360,7 +412,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="gallery-item group" data-category="生日系列">
+                    <div class="gallery-item group" data-category="生日系列" data-subcategory="粉色公主">
                         <a href="#" class="gallery-link block relative rounded-lg overflow-hidden shadow-md aspect-[3/4]">
                             <img src="portfolio/生日系列/粉色公主/_H0A2242.jpg" alt="粉色公主" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
@@ -451,14 +503,21 @@
                 }
             });
             
-            // Category filtering
-            const filterBtns = document.querySelectorAll('.filter-btn');
+            // Main Category filtering
+            const mainFilterBtns = document.querySelectorAll('.main-filter-btn');
+            const subCategoriesContainer = document.getElementById('subCategoriesContainer');
+            const subcategoryGroups = document.querySelectorAll('.subcategory-group');
+            const subFilterBtns = document.querySelectorAll('.sub-filter-btn');
             const galleryItems = document.querySelectorAll('.gallery-item');
             
-            filterBtns.forEach(btn => {
+            let activeMainCategory = 'all';
+            let activeSubcategory = 'all';
+            
+            // Main category filter
+            mainFilterBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => {
+                    // Remove active class from all main buttons
+                    mainFilterBtns.forEach(b => {
                         b.classList.remove('active', 'bg-amber-600', 'text-white');
                         b.classList.add('bg-white', 'text-gray-700');
                     });
@@ -467,25 +526,108 @@
                     this.classList.add('active', 'bg-amber-600', 'text-white');
                     this.classList.remove('bg-white', 'text-gray-700');
                     
-                    const filter = this.getAttribute('data-filter');
+                    // Get the selected main category
+                    activeMainCategory = this.getAttribute('data-filter');
                     
-                    // Filter gallery items
-                    galleryItems.forEach(item => {
-                        if (filter === 'all') {
+                    // Show/hide subcategory container
+                    if (activeMainCategory === 'all') {
+                        // Hide subcategories for "All" filter
+                        subCategoriesContainer.classList.remove('opacity-100', 'h-auto', 'mb-6');
+                        subCategoriesContainer.classList.add('opacity-0', 'h-0', 'overflow-hidden');
+                    } else {
+                        // Show subcategories for specific category
+                        subCategoriesContainer.classList.remove('opacity-0', 'h-0', 'overflow-hidden');
+                        subCategoriesContainer.classList.add('opacity-100', 'h-auto', 'mb-6');
+                        
+                        // Show only relevant subcategory group
+                        subcategoryGroups.forEach(group => {
+                            if (group.getAttribute('data-parent') === activeMainCategory) {
+                                group.classList.remove('hidden');
+                            } else {
+                                group.classList.add('hidden');
+                            }
+                        });
+                        
+                        // Reset all subcategory buttons in the visible group
+                        const visibleSubBtns = document.querySelectorAll(`.subcategory-group[data-parent="${activeMainCategory}"] .sub-filter-btn`);
+                        visibleSubBtns.forEach(b => {
+                            b.classList.remove('active', 'bg-amber-500', 'text-white');
+                            b.classList.add('bg-gray-200', 'text-gray-800');
+                        });
+                        
+                        // Set the "all" subcategory button as active
+                        const allSubBtn = document.querySelector(`.subcategory-group[data-parent="${activeMainCategory}"] .sub-filter-btn[data-filter="all"]`);
+                        if (allSubBtn) {
+                            allSubBtn.classList.add('active', 'bg-amber-500', 'text-white');
+                            allSubBtn.classList.remove('bg-gray-200', 'text-gray-800');
+                        }
+                        
+                        // Reset subcategory filter
+                        activeSubcategory = 'all';
+                    }
+                    
+                    // Apply filters
+                    filterGallery();
+                });
+            });
+            
+            // Subcategory filter
+            subFilterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Find the parent category for this subcategory
+                    const parentCategory = this.closest('.subcategory-group').getAttribute('data-parent');
+                    
+                    // Remove active class from all subcategory buttons in this group
+                    const groupButtons = document.querySelectorAll(`.subcategory-group[data-parent="${parentCategory}"] .sub-filter-btn`);
+                    groupButtons.forEach(b => {
+                        b.classList.remove('active', 'bg-amber-500', 'text-white');
+                        b.classList.add('bg-gray-200', 'text-gray-800');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-amber-500', 'text-white');
+                    this.classList.remove('bg-gray-200', 'text-gray-800');
+                    
+                    // Get the selected subcategory
+                    activeSubcategory = this.getAttribute('data-filter');
+                    
+                    // Apply filters
+                    filterGallery();
+                });
+            });
+            
+            // Function to filter gallery items based on active filters
+            function filterGallery() {
+                galleryItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    const itemSubcategory = item.getAttribute('data-subcategory');
+                    
+                    if (activeMainCategory === 'all') {
+                        // Show all items when "All" main category is selected
+                        item.classList.remove('hidden');
+                        item.classList.add('animate-fadeIn');
+                    } else if (itemCategory === activeMainCategory) {
+                        // Item matches the main category
+                        if (activeSubcategory === 'all') {
+                            // Show all items in this main category
+                            item.classList.remove('hidden');
+                            item.classList.add('animate-fadeIn');
+                        } else if (itemSubcategory === activeSubcategory) {
+                            // Item matches both main and subcategory
                             item.classList.remove('hidden');
                             item.classList.add('animate-fadeIn');
                         } else {
-                            if (item.getAttribute('data-category') === filter) {
-                                item.classList.remove('hidden');
-                                item.classList.add('animate-fadeIn');
-                            } else {
-                                item.classList.add('hidden');
-                                item.classList.remove('animate-fadeIn');
-                            }
+                            // Item doesn't match subcategory
+                            item.classList.add('hidden');
+                            item.classList.remove('animate-fadeIn');
                         }
-                    });
+                    } else {
+                        // Item doesn't match main category
+                        item.classList.add('hidden');
+                        item.classList.remove('animate-fadeIn');
+                    }
                 });
-            });
+            }
             
             // Image preview functionality
             const galleryLinks = document.querySelectorAll('.gallery-link');
